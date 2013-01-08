@@ -22,13 +22,16 @@ all the packages, and inside get a clone of ``buster-dev-tools`` from GitHub::
     mkdir myBusterDevEnv
     cd myBusterDevEnv
     git clone https://github.com/busterjs/buster-dev-tools.git
+    cd buster-dev-tools
+    npm install
+    cd ..
 
 Now you need to set some environment variables. ``{path to devEnv}`` is the
 absolute path to the folder where you just ran ``git clone``.
 
 On Linux and Mac OS X::
 
-    export NODE_PATH=<kbd>{path to devEnv}</kbd>
+    export NODE_PATH=`pwd`
     export PATH=$NODE_PATH/buster-dev-tools/bin:$PATH
     export PATH=$NODE_PATH/buster/bin:$PATH
 
